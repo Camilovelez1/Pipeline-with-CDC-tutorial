@@ -1,0 +1,13 @@
+resources:
+  pipelines:
+    pipelines_with_cdc_tutorial:
+      name: Pipelines with CDC tutorial
+      libraries:
+        - glob:
+            include: ../src/transformations/**
+      catalog: dbdemos
+      channel: CURRENT
+      photon: true
+      root_path: ../src
+      schema: brz_landing
+      serverless: true
